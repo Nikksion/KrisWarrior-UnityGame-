@@ -13,11 +13,11 @@ public class StasusBar : MonoBehaviour
     [SerializeField] private TextMeshProUGUI HealthText;
     [SerializeField] private TextMeshProUGUI ArmorText;
     private void OnEnable() {
-        Player.OnPlayerHealthChanged += ChangeStatusBar;
+        AbstractPlayer.OnPlayerHealthChanged += ChangeStatusBar;
     }
 
     private void OnDisable() {
-       Player.OnPlayerHealthChanged -= ChangeStatusBar;
+        AbstractPlayer.OnPlayerHealthChanged -= ChangeStatusBar;
     }
     private void ChangeStatusBar(int MaxArmor, int Armor, int MaxHealth, int Health) {
         HealthBar.fillAmount = (float) Health / MaxHealth;

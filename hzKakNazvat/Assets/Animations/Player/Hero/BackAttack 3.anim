@@ -30,7 +30,7 @@ AnimationClip:
       value: {fileID: 10348544, guid: 982372241f487e14a94cf73e8951e32d, type: 3}
     - time: 0.41666666
       value: {fileID: 1760736699, guid: 982372241f487e14a94cf73e8951e32d, type: 3}
-    - time: 0.5833333
+    - time: 0.5
       value: {fileID: 1760736699, guid: 982372241f487e14a94cf73e8951e32d, type: 3}
     attribute: m_Sprite
     path: 
@@ -65,7 +65,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.59999996
+    m_StopTime: 0.51666665
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -106,7 +106,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.5833333
+  - time: 0.5
     functionName: ImputTurnOn
     data: 
     objectReferenceParameter: {fileID: 0}

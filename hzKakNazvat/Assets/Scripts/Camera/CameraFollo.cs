@@ -10,11 +10,11 @@ public class CameraFollo : MonoBehaviour {
     [SerializeField] private float shakeMagnitude = 2f; 
 
     private void OnEnable() {
-        Player.OnPlayerDamageTaked += ShakeCamera; 
+        AbstractPlayer.OnPlayerDamageTaked += ShakeCamera; 
     }
 
     private void OnDisable() {
-        Player.OnPlayerDamageTaked -= ShakeCamera; 
+        AbstractPlayer.OnPlayerDamageTaked -= ShakeCamera; 
     }
 
     private void LateUpdate() {

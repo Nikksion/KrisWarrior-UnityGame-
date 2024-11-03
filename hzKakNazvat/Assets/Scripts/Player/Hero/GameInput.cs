@@ -13,7 +13,7 @@ public class GameInput : MonoBehaviour {
     [SerializeField] private bool _isRunBack = false;
     [SerializeField] private bool _isRunFront = false;
     [SerializeField] private bool _isMove = false;
-    private Player _player;
+    private AbstractPlayer _player;
     private float _dirX, _dirY;
     private float _angle;
     private float _angleDegrees; 
@@ -21,7 +21,7 @@ public class GameInput : MonoBehaviour {
     private void Awake() {
         Instance = this;
         GetComponentInChildren<Weapon>();
-        _player = FindObjectOfType<Player>();
+        _player = FindObjectOfType<AbstractPlayer>();
     }
     private void Update() {
         PlayerAnimanion();

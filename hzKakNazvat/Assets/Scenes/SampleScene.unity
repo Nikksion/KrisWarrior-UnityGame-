@@ -1488,13 +1488,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865846672}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0.05, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1613020942}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &865846674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2356,12 +2356,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3617aac1ea08fb74d9fdd6ac990e09fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMaxHealth: 5
-  _playerHealth: 0
-  _playerMaxArmor: 3
-  _playerArmor: 0
-  _playerMoveSpeed: 4
-  _playerDashSpeed: 5
+  _maxHealth: 5
+  _health: 0
+  _moveSpeed: 5
+  _maxArmor: 3
+  _armor: 0
+  _dashSpeed: 4
   _weapon: {fileID: 865846674}
 --- !u!4 &1613020942
 Transform:
@@ -2406,7 +2406,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1613020944
 MonoBehaviour:
@@ -2544,7 +2544,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1613020940}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_TargetAssemblyTypeName: AbstractPlayer, Assembly-CSharp
         m_MethodName: OnClickDashButtom
         m_Mode: 1
         m_Arguments:

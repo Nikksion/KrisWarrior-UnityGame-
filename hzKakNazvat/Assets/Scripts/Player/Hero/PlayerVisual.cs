@@ -7,7 +7,7 @@ public class PlayerVisual : MonoBehaviour
 {
     [SerializeField] private Weapon _weapon;
     private Animator _animator;
-    private Player _player;
+    private AbstractPlayer _player;
     private SpriteRenderer _spriteRenderer;
     private const string IS_RUN_SIDE = "IsRunSide";
     private const string IS_RUN_BACK = "IsRunBack";
@@ -20,18 +20,18 @@ public class PlayerVisual : MonoBehaviour
     private void Awake() {
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _player = FindObjectOfType<Player>(); 
+        _player = FindObjectOfType<AbstractPlayer>(); 
         GetComponentInChildren<Weapon>();
     }
     private void OnEnable() {
         Weapon.OnWeaponAttack += AttackAnimation;
-        Player.OnPlayerDied += DieAnimation;
-        Player.OnPlayerDamageTaked += PlayerTakeDamage;
+        AbstractPlayer.OnPlayerDied += DieAnimation;
+        AbstractPlayer.OnPlayerDamageTaked += PlayerTakeDamage;
     }
     private void OnDisable() {
         Weapon.OnWeaponAttack -= AttackAnimation;
-        Player.OnPlayerDied -= DieAnimation;
-        Player.OnPlayerDamageTaked -= PlayerTakeDamage;
+        AbstractPlayer.OnPlayerDied -= DieAnimation;
+        AbstractPlayer.OnPlayerDamageTaked -= PlayerTakeDamage;
     }
     private void Update() {
         _animator.SetBool(IS_RUN_SIDE, GameInput.Instance.IsRunningSide());
