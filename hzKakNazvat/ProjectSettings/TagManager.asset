@@ -7,6 +7,15 @@ TagManager:
   - HitBoxPlayer
   - HitBoxEnemy
   - Floar
+  - Door
+  - RoomSpawnPoint
+  - Rooms
+  - Wall
+  - ActiveRoom
+  - MobSpawnPoint
+  - MobSpawner
+  - Mob
+  - NavMeshSurfece
   layers:
   - Default
   - TransparentFX

@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 4744181086238115785}
   m_Layer: 0
   m_Name: RogueMob
-  m_TagString: Untagged
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822d2147454e7314f8bad66279cf6b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 10000
+  _maxHealth: 1
 --- !u!114 &4744181086238115785
 MonoBehaviour:
   m_ObjectHideFlags: 0

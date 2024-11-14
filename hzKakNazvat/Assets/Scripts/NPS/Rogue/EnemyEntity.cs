@@ -34,6 +34,7 @@ public class EnemyEntity : MonoBehaviour {
             BoxColliderTurnOff();
             PolygonColliderTurnOff();
             EnemyDie?.Invoke(this, EventArgs.Empty);
+            Destroy(gameObject);
         }
     }
     

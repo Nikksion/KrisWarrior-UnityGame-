@@ -18,12 +18,6 @@ public class CameraFollo : MonoBehaviour {
     }
 
     private void LateUpdate() {
-        if (_object != null) {
-            // –ассчитываем и обновл€ем позицию камеры
-            Vector3 targetPosition = _object.transform.position + _distanceFromObject;
-            transform.position = Vector3.Lerp(transform.position, targetPosition, 0.125f);
-            transform.LookAt(_object.transform.position);
-        }
     }
 
     private void ShakeCamera() {
